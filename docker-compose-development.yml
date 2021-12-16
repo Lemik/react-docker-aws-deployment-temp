@@ -1,0 +1,11 @@
+version: '3'
+services:
+  deployment:
+    build:
+      context: .
+      dockerfile: dockerfile.development
+    ports:
+      - '4500:3000'
+    volumes:
+      - ./src:/usr/app/
+      - ./src/node_modules:/usr/app/node_modules
